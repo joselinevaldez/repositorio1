@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class TiendaComponent {
   public titulo;
+  public nombreDelParque: string;
+  public nomParque: string;
   constructor(){
       this.titulo="esta es mi tienda";
   }
+
 }
