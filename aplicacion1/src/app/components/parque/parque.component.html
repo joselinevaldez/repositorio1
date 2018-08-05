@@ -1,18 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div >
-  <h2>
-   {{nombre}}
-  </h2>
-<ul>
- 
-  <li> 1.vegetacion: {{vegetacion}}</li>
-  <li> 2.metros: {{metros}}</li>
-  <li>3.
-  <span *ngIf="abierto == true">Abierto</span>
-  <span *ngIf="abierto != true">Cerrado</span>
-  </li>
-
-</ul>
+<div class="black">
+  <h1>
+    {{nombre}}
+  </h1>
+  <p>
+    {{email}}
+  </p>
+  <a href="{{website}}" target="_blank">
+    Visita mi sitio web
+  </a>
 </div>
+<button (click)="toggleHobbies()" 
+class="btn">
+{{showHobbies ? 'Ocultar Hobbies' : 'Mostrar Hobbies' }}</button>
+<div *ngIf="showHobbies" class="component2">
+  <h3>Hobbies</h3>
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+      {{hobby}}
 
-
+    </li>
+  </ul>
+  <form (submit)="newHobby(hobby)">
+      <input #hobby type="text" name="hobby" placeholder="hobby">
+    </form>
+</div>

@@ -2,17 +2,28 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'parque',
-  templateUrl : '/parque.component.html'
+  templateUrl : '/parque.component.html',
+  styleUrls: ['/parque.component.css']
 })
 export class ParqueComponent {
-  public nombre : string;
-  public metros : number;
-  public vegetacion: string;
-  public abierto: boolean;
+  nombre : string;
+  email : string;
+  website: string;
+  hobbies: string[];
+  showHobbies: boolean;
   constructor(){
-      this.nombre= 'parque natural';
-      this.metros=450;
-      this.vegetacion='Alta';
-      this.abierto=true;
+      this.nombre= 'Joseline';
+      this.email='joselinevg4@gmail.com';
+      this.website='https://www.facebook.com';
+      this.hobbies=['Programar','jugar','ver tv'];
+      this.showHobbies=true;
   }
+newHobby(hobby){
+ this.hobbies.push(hobby.value);
+ hobby.value="";
+  return false;
+}
+toggleHobbies(){
+ this.showHobbies= !this.showHobbies;
+}
 }
