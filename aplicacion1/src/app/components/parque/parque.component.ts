@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'parque',
@@ -6,24 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['/parque.component.css']
 })
 export class ParqueComponent {
-  nombre : string;
-  email : string;
-  website: string;
-  hobbies: string[];
-  showHobbies: boolean;
+ @Input() nombre : string;
+ @Input('metros_cuadrados')  metros : number;
+ public vegetacion: string;
+ public abierto: boolean;
+
   constructor(){
-      this.nombre= 'Joseline';
-      this.email='joselinevg4@gmail.com';
-      this.website='https://www.facebook.com';
-      this.hobbies=['Programar','jugar','ver tv'];
-      this.showHobbies=true;
-  }
-newHobby(hobby){
- this.hobbies.push(hobby.value);
- hobby.value="";
-  return false;
-}
-toggleHobbies(){
- this.showHobbies= !this.showHobbies;
-}
+   this.nombre= 'Parque natural';
+   this.metros= 450;
+   this.vegetacion = 'Alta'
+   this.abierto=true;
+
+  }  
 }

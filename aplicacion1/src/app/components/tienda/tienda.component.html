@@ -1,16 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div >
-  <h1>
-   Esta es la tienda
-  </h1>
-</div>
-  <ul>
-    <li>
-    Camiseta roja
-    </li>
-    <li>Camiseta</li>
-  </ul>
-  
+padre:
+<h1>{{titulo}}</h1>
+<ul>
+  <li>Camiseta Roja</li>
+  <li>Camiseta negra</li>
+</ul>
+<hr/>
+<p>
+Nombre del parque 
+<input type="text" [(ngModel)]="nombreDelParque" keyup="mostrarNombre()" />
 
+</p>
+<p>
+  Resultado : {{nombreDelParque}}
 
+</p>
+<hr/>
+<p *ngIf="nombreDelParque">
+hijo: 
 
+<parque [nombre]="nombreDelParque" [metros_cuadrados]="567"></parque>
+</p>

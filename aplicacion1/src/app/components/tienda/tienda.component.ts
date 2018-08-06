@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'tienda',
   templateUrl : '/tienda.component.html',
@@ -10,7 +11,9 @@ export class TiendaComponent {
   public nombreDelParque: string;
   public nomParque: string;
   constructor(){
-      this.titulo="esta es mi tienda";
+      this.titulo="Esta es mi tienda";
   }
-
+  mostrarNombre(){
+    console.log(this.nombreDelParque);
+  }
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ParqueComponent} from './components/parque/parque.component';
@@ -11,7 +11,8 @@ import { ParqueComponent} from './components/parque/parque.component';
     ParqueComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
