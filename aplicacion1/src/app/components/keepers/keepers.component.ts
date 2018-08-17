@@ -8,6 +8,6 @@ export class KeepersComponent implements OnInit {
     title = 'Cuidadores';
 
     ngOnInit(){
-        console.log("componente home iniciado");
+        console.log("componente cuidador iniciado");
     }
 }
